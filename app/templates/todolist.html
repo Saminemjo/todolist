@@ -1,0 +1,10 @@
+<a class="btn btn-primary pull-left" href="/#!/home">Home</a>
+
+<h1>To do List</h1>
+
+<ul class="text-center">
+  <li class="list-group-item" ng-repeat="todo in todos" ng-class="{'list-group-item-success': todo.done }">
+<input type="checkbox" ng-model="todo.done">
+{{ todo.value }}
+</li>
+  </lu>

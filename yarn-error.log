@@ -1,0 +1,45 @@
+Arguments: 
+  /usr/bin/nodejs /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/mana/.rvm/gems/ruby-2.4.0/bin:/home/mana/.rvm/gems/ruby-2.4.0@global/bin:/home/mana/.rvm/rubies/ruby-2.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mana/.rvm/bin:/snap/bin:/home/mana/.rvm/bin:/home/mana/.rvm/bin
+
+Yarn version: 
+  0.21.3
+
+Node version: 
+  4.2.6
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "mean-lineman",
+    "description": "Just another MEAN Stack",
+    "version": "1.0.0",
+    "private": true,
+    "author": "Jean-Baptiste Pasquier",
+    "devDependencies": {
+      "lineman": "~0.37.0",
+      "lineman-angular": "^0.3.0",
+      "lineman-less": "^0.1.0"
+    },
+    "scripts": {
+      "start": "lineman run",
+      "test": "lineman spec-ci",
+      "production": "lineman clean build && node -e \"var e = require('express'), a = e(); a.use(e.static('dist/')); a.listen(process.env.PORT || 8000); console.log('Server is ready at port ' + (process.env.PORT || 8000))\""
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.npmjs.org:80
+      at Object.exports._errnoException (util.js:870:11)
+      at errnoException (dns.js:31:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:77:26)
