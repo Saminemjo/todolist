@@ -32,6 +32,11 @@ angular.module('app')
 
         ];
 
+        $scope.newTodos = [];
+        $scope.addTodo = function(done, value) {
+            $scope.todos.push($scope.newTodo);
+                $scope.newTodo={};
+        };
 
 
 
